@@ -1,0 +1,347 @@
+/* 초기화 */
+ *{ /* *은 모든 태그 선택자 */
+    margin : 0;
+    padding: 0;
+    /* 가로세로 길이 기준을 보더박스 기준*/
+    box-sizing: border-box;
+}
+body{
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+}
+
+#main-page{
+        position: relative;
+        background-image: url(img/img0.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 80vh; 
+}
+
+.main-navi{
+    /* 화면 상단에 붙어있는 포지션 */
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    background-color: white;
+    padding: 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+.main-navi .logo{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.main-navi .logo i {
+    font-size: 40px;
+    position: relative;
+    top: 7px;
+}
+.main-navi .logo a{
+    text-decoration: none;
+    color:  rgba(255,56,92);
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding-bottom: 7px;
+}
+.main-navi .search .btn{
+    height: 48px;
+    width: 300px;
+    border-radius: 30px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #DDDDDD;
+    background-color: white;
+    outline: none; 
+    font-weight: 900;
+}
+
+.main-navi .search .btn:hover{
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.15); /*rgba에서 a는 투명도*/
+}
+.main-navi .search .bicon{
+    background-color: rgba(255,56,92);
+    color: white;
+    border-radius: 50%; /*원*/
+    padding: 7px 9px;
+}
+.main-navi .menu{
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+  cursor: pointer;
+  text-align: justify;
+}
+.main-navi .menu .item:hover{
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.15); /*rgba에서 a는 투명도*/
+}
+.main-navi .menu .item1{
+    border: 1px solid;
+    color: #222;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 30px;
+    padding: 5px 10px 5px 10px;
+    margin: 0px;
+    position: relative;
+    cursor: pointer;
+}
+.main-navi .menu .item1:hover{
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.15); /*rgba에서 a는 투명도*/
+}
+.box{
+    width: 1600px;
+    height: 364px;
+    padding: 15% 80px;
+    display: inline-block;
+    cursor: pointer;
+
+}
+.box h1{
+    font-size: 60px;
+    font-weight: 900;
+}
+.box p{
+    padding-left: 5px;
+    font-size: 22px;
+    font-weight: 400;
+    margin-top: 15px;
+}
+.box button{
+    font-size: 14px;
+    background-color: #222222;
+    color: white;
+    border-radius: 10px;
+    padding: 8px 16px;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-weight: 600;
+}
+/* 첫페이지 */
+
+/* 둘러보기 섹션 */
+section{
+    padding: 0 80px;
+    margin-top: 70px;
+}
+#around .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    cursor: pointer;
+}
+#around img{
+    width: 90px;
+    border-radius: 20px;
+    margin-right: 20px;
+    margin-bottom: -20px;
+    float: left;
+}
+#around h1{
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    margin-bottom: 10px;
+    text-indent: 25px;
+}
+#around div{
+    font-size: 20px;
+    font-weight: 900;
+    padding: 10px;
+    line-height: 20px;
+}
+#around p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* 살아보기 섹션 */
+section{
+    padding: 0 80px;
+    margin-top: 70px;
+}
+#live .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    cursor: pointer;
+}
+#live img{
+    width: 100%;
+    border-radius: 10px;
+}
+#live h1{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-indent: 20px;
+}
+#live div{
+    font-size: 19px;
+    line-height: 22px;
+    font-weight: 900;
+    padding: 10px;
+}
+/* 호스트 섹션 */
+section{
+    padding: 0 80px;
+    margin: 0px 20px 24px;
+}
+.host{
+    justify-content: center;
+    position: sticky;
+    min-height: 1px;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+.host .img img{
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    vertical-align: bottom;
+}
+.host .box1{
+    padding: 80px 80px;
+    color: white;
+    position: relative;
+    display: block;
+    text-align: left;
+}
+.host .box1 h1{
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 60px;
+    padding-bottom: 20px;
+}
+.host .box1 span{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+}
+.host .box1 button{
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 14px 24px;
+    letter-spacing: normal;
+    font-weight: 600;
+    margin-top: 30px;
+    ;
+}
+
+/* 체험 둘러보기 섹션 */
+section{
+    padding: 0 80px;
+    margin-top: 70px;
+}
+#experience{
+    margin-bottom: 0;
+    margin-left: 20px;
+   
+}
+ #experience .grid{
+    display: inline-flex; 
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    cursor: pointer;
+}
+#experience img{
+    width: 100%;
+    border-radius: 15px;
+}
+#experience h1{
+    font-size: 32px;
+    text-indent: 5px;
+    cursor: pointer;
+}
+#experience h2{
+    font-size: 26px;
+    margin-bottom: 5px;
+    font-weight: 400;
+    text-indent: 7px;
+    cursor: pointer;
+}
+#experience div{
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+#experience p{
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+/* 마지막 설명 */
+section{
+    padding: 0 80px;
+}
+#exp {
+    margin-top: 10px;
+    padding: 20px
+}
+#exp .grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-around;
+    color : #484848;
+    gap: 10px;
+    line-height: 40px;
+}
+#exp div{
+    font-size: 16px;
+    font-weight: 900;
+}
+#exp p{
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/* last */
+#last{
+    border-top: 1px solid #DDDDDD;
+    padding: 24px 80px;
+    color: #484848;
+    font-size: 14px;
+    gap: 20px;
+}
+#last .last-navi {
+    display: flex;
+    justify-content: space-between;
+}
+#last .logo2{
+    text-align: left;
+    display: flex;
+    
+}
+#last .logo2 p{
+    cursor: pointer;
+}
+#last .logo2 p:hover{
+    text-decoration: underline;
+    color: gray;
+}
+#last .item{
+    display: flex;
+    margin-left: 32px;
+    text-align: justify;
+    font-weight: 900;
+    word-break: keep-all;
+    cursor: pointer;
+ }
+#last .item .img{
+    display: block;
+
+}
